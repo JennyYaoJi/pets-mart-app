@@ -34,7 +34,6 @@ export default class Home extends Component{
         })
     }
     render() {
-        const pet = this.state.pets[0];
         return (
             <div>
                 <p>Welcome to Home Page!</p>

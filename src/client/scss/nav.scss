@@ -1,9 +1,12 @@
 .nav{
-    padding: 10px 50px;
+    padding: 5px 50px;
     background-color: #f1cd70;
 }
+.navbar-logo{
+    margin-top: -8px;
+}
 .navbar-collpase{
-    width: 90%;
+    width: 80%;
     display: flex;
 }
 .navbar-list{
@@ -12,7 +15,11 @@
     margin-bottom: 0;
     height: 100%;
     width: 100%;
-    align-items: flex-end;
+    align-items: center;
+    padding: 0px;
+}
+.navbar-list.left{
+    padding-left: 20px;
 }
 .navbar-list.right{
     justify-content: flex-end;

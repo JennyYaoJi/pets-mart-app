@@ -8,7 +8,8 @@ export default class Nav extends Component {
       <div>
         <div className="nav">
           <a className="navbar-logo" href="/">
-            <img src="../../../image/logo.png" width="50" height="50" alt="" />
+            <img src="../../../image/logo.png" width="60" height="60" alt="" />
+            <img src="../../../image/logoWord.png" width="60" height="60" alt="" />
           </a>
           <div className="navbar-collpase">
             <ul className="navbar-list left">
@@ -31,7 +32,7 @@ export default class Nav extends Component {
             <ul className="navbar-list right">
               <li className="navbar-item">
                 <Link to="/about" className="nav-link">
-                  我的
+                  登录/注册
                 </Link>
               </li>
               <li className="navbar-item">

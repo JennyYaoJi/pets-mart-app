@@ -6,25 +6,42 @@ export default class Nav extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link to="/" className="navbar-brand">
-            Pets Mart App
-          </Link>
-          <div className="collpase navbar-collpase">
-            <ul className="navbar-nav mr-auto">
+        <div className="nav">
+          <a className="navbar-logo" href="/">
+            <img src="../../../image/logo.png" width="50" height="50" alt="" />
+          </a>
+          <div className="navbar-collpase">
+            <ul className="navbar-list left">
               <li className="navbar-item">
                 <Link to="/" className="nav-link">
-                  Home
+                  首页
                 </Link>
               </li>
               <li className="navbar-item">
                 <Link to="/about" className="nav-link">
-                  About
+                  发现
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/about" className="nav-link">
+                  商城
+                </Link>
+              </li>
+            </ul>
+            <ul className="navbar-list right">
+              <li className="navbar-item">
+                <Link to="/about" className="nav-link">
+                  我的
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/about" className="nav-link">
+                  关于
                 </Link>
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
       </div>
     );
   }

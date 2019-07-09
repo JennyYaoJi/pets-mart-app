@@ -4,12 +4,13 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const petRoutes = express.Router();
-const PORT = 4001;
+const PORT = 4000;
 
 let Pet = require('./pet.model');
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/dist'));
 
 mongoose.connect('mongodb://127.0.0.1:27017/pets', { useNewUrlParser: true });
 const connection = mongoose.connection;
@@ -47,7 +48,6 @@ petRoutes.route('/add').post(function(req, res) {
 });
 
 app.use('/pets', petRoutes);
-app.use(express.static('dist'));
 
 app.listen(PORT, function() {
     console.log('Server is running on Port: ' + PORT);

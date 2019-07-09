@@ -18,21 +18,26 @@ const config = {
         }
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.(css|scss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        exclude: /node_modules/,
+        use: ['file-loader?name=[name].[ext]'] // ?name=[name].[ext] is only necessary to preserve the original file name
       }
     ]
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
-  devServer: {
-    port: 4000,
-    open: true,
-    proxy: {
-      '/api': 'http://localhost:4000'
-    }
-  },
+  // devServer: {
+  //   port: 4000,
+  //   open: true,
+  //   proxy: {
+  //     '/api': 'http://localhost:4001'
+  //   }
+  // },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({

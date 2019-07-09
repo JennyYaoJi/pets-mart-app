@@ -1,0 +1,22 @@
+.nav{
+    padding: 10px 50px;
+    background-color: #f1cd70;
+}
+.navbar-collpase{
+    width: 90%;
+    display: flex;
+}
+.navbar-list{
+    list-style: none;
+    display: flex;
+    margin-bottom: 0;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+}
+.navbar-list.right{
+    justify-content: flex-end;
+}
+.navbar-item .nav-link{
+    color: #7b503b;
+}
